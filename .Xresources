@@ -1,0 +1,7 @@
+xterm*font: fixed
+xterm*boldFont: fixed
+xterm*selectToClipBoard: true
+xterm*faceName: DejaVu Sans Mono Book
+xterm*faceSize: 11
+xterm*rightScrollBar: true
+xterm*ScrollBar: true
