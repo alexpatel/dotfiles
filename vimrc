@@ -1,5 +1,7 @@
-execute pathogen#infect()
 filetype plugin indent on					
+
+call pathogen#infect()
+call pathogen#helptags()
 
 let mapleader=","							" Change leader from \ to ,
 set nocompatible							" No Vi compatibility
@@ -14,6 +16,7 @@ set showcmd									" Show partial command as it's being typed
 set linebreak								" Don't wrap text in middle of word
 set directory=$HOME/.vim/swapdir			" Swapfile storage dir
 set clipboard=unnamed						" Access X11 Clipboard by default
+set nobackup                                " No backup files 
 
 " Color scheme
 set t_Co=256
@@ -56,6 +59,12 @@ map 0 ^
 " Yank rest of line with 'Y'
 map Y y$
 
+" Save and quit
+nnoremap qq :wq<cr>
+
+" Redo
+noremap rr <c-r>
+
 " Add a line without changing position or leaving mode
 map <leader>o :set paste<cr>m`o<esc>``:set nopaste<cr>
 map <leader>O :set paste<cr>m`O<esc>``:set nopaste<cr>`
@@ -71,9 +80,11 @@ nnoremap k gk
 nnoremap <leader>ev :tabnew $MYVIMRC<cr>	
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" Move to next/last parentheses	
-onoremap in( :<c-u>normal! f(vi(<cr>		
-onoremap il( :<c-u>normal! F)vi(<cr>
+" Move around tabs
+noremap <S-H> gT
+noremap <S-L> gt
 
-set undofile								" Keeps persistent undo file 
+" Keeps persistent undo file 
+set undofile								
 set undodir=$HOME/.vim/undodir
+
