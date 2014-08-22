@@ -1,0 +1,34 @@
+" Move between tabs
+noremap <S-H> gT
+noremap <S-L> gt
+
+" Forwards/backwards in history
+noremap <S-J> <S-H>
+noremap <S-K> <S-L>
+
+" Fast scrolling, slow scrolling with <ctrl>
+noremap j 8j 
+noremap k 8k
+noremap <c-j> j
+noremap <c-k> k
+
+" Focus on address bar
+noremap l <c-l>
+
+" Focus on address bar on new tab
+set! browser.newtab.url=about:blank
+
+" source vimperratorc
+map <space> /
+map <c-space> ?
+set ignorecase
+set hlsearch
+
+" Open popups in new tab
+set popups=tab
+
+" remove 'Mozilla Firefox' from title
+set titlestring=
+
+
+

@@ -20,7 +20,7 @@ set nobackup                                " No backup files
 
 " Color scheme
 set t_Co=256
-colorscheme jellybeans 
+colorscheme jellybeans
 syntax enable
 
 " Line numbers
@@ -50,6 +50,7 @@ set incsearch								" Search as chars are entered
 
 " Unhighlight search results
 nmap <silent> <leader>n :silent nohl<cr>
+j
 " Number of matches to last search term
 nmap <leader># :%s<C-R>/::gn<cr>
 
@@ -84,7 +85,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 noremap <S-H> gT
 noremap <S-L> gt
 
+" Fast vertical movement
+noremap <c-j> 5j
+noremap <c-k> 5k
+
 " Keeps persistent undo file 
 set undofile								
 set undodir=$HOME/.vim/undodir
 
+" NERDTree
+let NERDTreeQuitOnOpen=1 " Quit on opening files from tree 
