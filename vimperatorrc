@@ -7,13 +7,10 @@ noremap <S-J> <S-H>
 noremap <S-K> <S-L>
 
 " Fast scrolling, slow scrolling with <ctrl>
-noremap j 8j 
-noremap k 8k
 noremap <c-j> j
 noremap <c-k> k
-
-" Focus on address bar
-noremap l <c-l>
+noremap j 5j
+noremap k 5k
 
 " Focus on address bar on new tab
 set! browser.newtab.url=about:blank
@@ -26,6 +23,9 @@ set hlsearch
 
 " Open popups in new tab
 set popups=tab
+
+" Show tab numbers 
+set tabnumbers
 
 " remove 'Mozilla Firefox' from title
 set titlestring=

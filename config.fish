@@ -5,18 +5,20 @@ set PATH $PATH ~/.cabal/bin
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias -"cd -"
+alias -="cd -"
 alias d="cd ~/Dropbox"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-
-alias ls="ls -1 --group-directories-first"
+alias rmd="rm -rf"
+alias ls="ls -1 --group-directories-first --color"
+alias cl="clear"
 
 alias v="vim"
 alias p="python"
 
 # Git
 alias g="git"
+alias gs="git status"
 alias ga="git add"
 alias gc="git commit -am"
 alias gp="git push"
