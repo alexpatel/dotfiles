@@ -36,8 +36,8 @@ au FocusLost * silent! wa
 set autowrite	
 
 " Tabs
-set tabstop=4							
-set softtabstop=4
+set tabstop=8							
+set softtabstop=8
 set smarttab
 set expandtab
 
@@ -92,6 +92,3 @@ noremap <c-k> 5k
 " Keeps persistent undo file 
 set undofile								
 set undodir=$HOME/.vim/undodir
-
-" NERDTree
-let NERDTreeQuitOnOpen=1 " Quit on opening files from tree 
