@@ -1,4 +1,4 @@
-" Move between tabs
+j Move between tabs
 noremap <S-H> gT
 noremap <S-L> gt
 
@@ -30,5 +30,10 @@ set tabnumbers
 " remove 'Mozilla Firefox' from title
 set titlestring=
 
-
+" qmarks
+qmark c calendar.google.com
+qmark f facebook.com
+qmark g google.com
+qmark h hckrnews.com
+qmark m mail.google.com
 
