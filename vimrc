@@ -92,3 +92,6 @@ noremap <c-k> 5k
 " Keeps persistent undo file 
 set undofile								
 set undodir=$HOME/.vim/undodir
+
+" NERDTree
+let NERDTreeIngore = ['\.pyc']
