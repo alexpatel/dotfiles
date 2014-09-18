@@ -20,7 +20,7 @@ syndaemon -d -i 0.1s -k
 xbindkeys
 /usr/bin/xmodmap $HOME/.Xmodmap
 # dropbox daemon
-dropboxd&
+# dropboxd&
 [[ -f ~/.Xresources ]] && xrdb - merge ~/.Xresources
 exec i3
 
