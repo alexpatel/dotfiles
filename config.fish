@@ -25,7 +25,6 @@ alias gc="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
 
-
 # Vagrant
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
@@ -33,3 +32,9 @@ alias vssh="vagrant ssh"
 alias vr="vagrant reload"
 alias manage="bash vagrant_manage.sh"
 alias shell="bash vagrant_manage.sh shell_plus"
+
+# to connect to my external monitor
+function conf_mon
+        xrandr --output HDMI1 --rotate left
+        xrandr --output HDMI1 --auto --above eDP1
+end
