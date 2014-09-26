@@ -37,8 +37,8 @@ au FocusLost * silent! wa
 set autowrite	
 
 " Tabs
-set tabstop=8							
-set softtabstop=8
+set tabstop=4							
+set softtabstop=4
 set smarttab
 set expandtab
 

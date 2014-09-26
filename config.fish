@@ -9,13 +9,14 @@ alias -="cd -"
 alias d="cd ~/Docs/2014-2015"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias cc="cd ~/Code/crimsononline"
 alias ls="ls -1 --group-directories-first --color"
 alias cl="clear"
-alias b="cd ~/.Blog"
 
 alias v="vim"
 alias python="python2"
+
+alias cc="cd ~/Code/crimsononline"
+alias crimson="cd ~/Code/crimsononline; and source ~/.virtualenvs/crimson/bin/activate.fish; and vagrant up "
 
 # Git
 alias g="git"
@@ -30,11 +31,12 @@ alias vup="vagrant up"
 alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
 alias vr="vagrant reload"
+alias vdestroy="vagrant destroy"
 alias manage="bash vagrant_manage.sh"
 alias shell="bash vagrant_manage.sh shell_plus"
 
 # to connect to my external monitor
-function conf_mon
-        xrandr --output HDMI1 --rotate left
+function monitor 
         xrandr --output HDMI1 --auto --above eDP1
+        xrandr --output HDMI1 --rotate left
 end
