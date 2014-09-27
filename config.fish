@@ -40,3 +40,16 @@ function monitor
         xrandr --output HDMI1 --auto --above eDP1
         xrandr --output HDMI1 --rotate left
 end
+
+function mkdir -d "Create a directory and set CWD"
+        command mkdir $argv
+        if test $status = 0
+                switch $argv[(count $argv)]
+                        case '-*'
+
+                        case '*'
+                                cd $argv[(count $argv)]
+                                return
+                end
+        end
+end
