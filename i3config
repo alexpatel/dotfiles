@@ -149,22 +149,28 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	position top
+        position top 
         colors {
-            background #606060
+            background #2C2D2E
             statusline #eee8d5
-            focused_workspace #cb4b16 #cb4b16 #eee8d5
-            active_workspace #cb4b16 #cb4b16 #eee8d5
-            inactive_workspace #b58900 #b58900 #eee8d5
+            focused_workspace #2C2D2E #ffffff #707678
+            active_workspace  #2C2D2E #ffffff #707678
+            inactive_workspace #AACCBB #2C2D2E #AACCBB
         }
 }
 
 # window colors
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 #073642 #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #5f676a #ffffff #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+# client.focused          #4c7899 #073642 #ffffff #2e9ef4
+# client.focused_inactive #333333 #5f676a #ffffff #484e50
+# client.unfocused        #333333 #5f676a #ffffff #292d2e
+# client.urgent           #2f343a #900000 #ffffff #900000
+
+# class                     border  backgr. text    indicator
+client.focused              #AACCBB #ffffff #2C2D2E #AACCBB
+client.focused_inactive     #707678 #2C2D2E #ffffff #707678
+client.unfocused            #707678 #2C2D2E #ffffff #707678
+client.urgent               #FEA63C #4D4D4D #ffffff #FFE863
 
 # don't follow mouse
 focus_follows_mouse no
