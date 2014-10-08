@@ -167,7 +167,7 @@ bar {
 # client.urgent           #2f343a #900000 #ffffff #900000
 
 # class                     border  backgr. text    indicator
-client.focused              #AACCBB #ffffff #2C2D2E #AACCBB
+client.focused              #ffffff #AACCBB #2C2D2E #AACCBB
 client.focused_inactive     #707678 #2C2D2E #ffffff #707678
 client.unfocused            #707678 #2C2D2E #ffffff #707678
 client.urgent               #FEA63C #4D4D4D #ffffff #FFE863
