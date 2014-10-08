@@ -9,8 +9,8 @@ noremap <S-K> <S-L>
 " Fast scrolling, slow scrolling with <ctrl>
 noremap <c-j> j
 noremap <c-k> k
-noremap j 5j
-noremap k 5k
+noremap j 8j
+noremap k 8k
 
 " Focus on address bar on new tab
 set! browser.newtab.url=about:blank

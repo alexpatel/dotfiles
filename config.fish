@@ -9,7 +9,7 @@ alias -="cd -"
 alias d="cd ~/Docs/2014-2015"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias ls="ls -1 --group-directories-first --color"
+alias ls="ls --group-directories-first --color"
 alias cl="clear"
 
 alias v="vim"
@@ -38,18 +38,5 @@ alias shell="bash vagrant_manage.sh shell_plus"
 # to connect to my external monitor
 function monitor 
         xrandr --output HDMI1 --auto --above eDP1
-        xrandr --output HDMI1 --rotate left
-end
-
-function mkdir -d "Create a directory and set CWD"
-        command mkdir $argv
-        if test $status = 0
-                switch $argv[(count $argv)]
-                        case '-*'
-
-                        case '*'
-                                cd $argv[(count $argv)]
-                                return
-                end
-        end
+        xrandr --output HDMI1 --rotate normal 
 end
