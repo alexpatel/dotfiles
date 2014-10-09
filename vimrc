@@ -87,8 +87,8 @@ noremap <S-H> gT
 noremap <S-L> gt
 
 " Fast vertical movement
-noremap <c-j> 5j
-noremap <c-k> 5k
+noremap <c-j> 10j
+noremap <c-k> 10k 
 
 " Keeps persistent undo file 
 set undofile								
