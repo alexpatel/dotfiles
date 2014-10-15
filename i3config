@@ -119,6 +119,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# move workspace to other output
+bindsym $mod+x move workspace to output right
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -150,31 +153,32 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         position top 
+        mode dock
         colors {
             background #2C2D2E
             statusline #eee8d5
-            focused_workspace #2C2D2E #ffffff #707678
-            active_workspace  #2C2D2E #ffffff #707678
+            focused_workspace #AACCBB #ffffff #707678
+            active_workspace  #AACCBB #ffffff #707678
             inactive_workspace #AACCBB #2C2D2E #AACCBB
         }
 }
 
 # window colors
 # class                 border  backgr. text    indicator
-# client.focused          #4c7899 #073642 #ffffff #2e9ef4
-# client.focused_inactive #333333 #5f676a #ffffff #484e50
-# client.unfocused        #333333 #5f676a #ffffff #292d2e
-# client.urgent           #2f343a #900000 #ffffff #900000
+#client.focused          #4c7899 #073642 #ffffff #2e9ef4
+#client.focused_inactive #333333 #5f676a #ffffff #484e50
+#client.unfocused        #333333 #5f676a #ffffff #292d2e
+#client.urgent           #2f343a #900000 #ffffff #900000
 
 # class                     border  backgr. text    indicator
-# client.focused              #ffffff #AACCBB #2C2D2E #AACCBB
-client.focused              #ffffff #707678 #ffffff #AACCBB
+client.focused              #ffffff #707678 #FFFF50 #AACCBB
 client.focused_inactive     #707678 #2C2D2E #ffffff #707678
 client.unfocused            #707678 #2C2D2E #ffffff #707678
 client.urgent               #FEA63C #4D4D4D #ffffff #FFE863
 
+
 # don't follow mouse
-focus_follows_mouse no
+# focus_follows_mouse no
 
 # open wifi applet
 exec --no-startup-id nm-applet
