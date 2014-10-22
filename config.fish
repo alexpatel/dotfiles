@@ -15,8 +15,7 @@ alias cl="clear"
 alias v="vim"
 alias python="python2"
 
-alias cc="cd ~/Code/crimsononline"
-alias crimson="cd ~/Code/crimsononline; and source ~/.virtualenvs/crimson/bin/activate.fish; and vagrant up "
+alias cc="cd ~/crimsononline"
 
 # Git
 alias g="git"
