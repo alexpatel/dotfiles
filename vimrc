@@ -6,22 +6,22 @@ call pathogen#helptags()
 let mapleader=","							" Change leader from \ to ,
 set nocompatible							" No Vi compatibility
 set whichwrap+=h,l							" Allow movement onto next/prev line with 'h, l' 
-set backspace=indent,eol,start	                			" Allow backspace in insert mode
+set backspace=indent,eol,start	            " Allow backspace in insert mode
 set cursorline								" Highlight cursorline
 set mouse=nv								" Allow mouse in normal mode
-set ruler								" Show cursor position
+set ruler								    " Show cursor position
 set shortmess=atI							" Don't show intro message
 set title		        					" Show filename in window titlebar
-set showcmd								" Show partial command as it's being typed
+set showcmd								    " Show partial command as it's being typed
 set linebreak								" Don't wrap text in middle of word
-set directory=$HOME/.vim/swapdir	                		" Swapfile storage dir
-set clipboard=unnamed			        			" Access X11 Clipboard by default
-set nobackup                                                            " No backup files 
-set modifiable                                                          " Change contents of any buffer 
+set directory=$HOME/.vim/swapdir	        " Swapfile storage dir
+set clipboard=unnamed			            " Access X11 Clipboard by default
+set nobackup                                " No backup files 
+set modifiable                              " Change contents of any buffer 
 
 " Color scheme
 set t_Co=256
-colorscheme jellybeans
+colorscheme jellybeans 
 syntax enable
 
 " Line numbers

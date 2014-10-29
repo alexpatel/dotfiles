@@ -1,8 +1,5 @@
 set fish_greeting ""
 
-# Run Haskell Cabal programs 
-set PATH $PATH ~/.cabal/bin
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
@@ -14,8 +11,6 @@ alias cl="clear"
 
 alias v="vim"
 alias python="python2"
-
-alias cc="cd ~/crimsononline"
 
 # Git
 alias g="git"
@@ -34,8 +29,6 @@ alias vdestroy="vagrant destroy"
 alias manage="bash vagrant_manage.sh"
 alias shell="bash vagrant_manage.sh shell_plus"
 
-# to connect to my external monitor
-function monitor 
-        xrandr --output HDMI1 --auto --above eDP1
-        xrandr --output HDMI1 --rotate normal 
+function activate
+        source ~/.venvs/$argv/bin/activate.fish
 end

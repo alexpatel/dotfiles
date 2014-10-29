@@ -178,7 +178,7 @@ client.urgent               #FEA63C #4D4D4D #ffffff #FFE863
 
 
 # don't follow mouse
-# focus_follows_mouse no
+focus_follows_mouse no
 
 # open wifi applet
 exec --no-startup-id nm-applet
