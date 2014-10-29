@@ -19,8 +19,6 @@ syndaemon -d -i 0.1s -k
 # keyboard config
 xbindkeys
 /usr/bin/xmodmap $HOME/.Xmodmap
-# dropbox daemon
-# dropboxd&
 [[ -f ~/.Xresources ]] && xrdb - merge ~/.Xresources
 exec i3
 
