@@ -6,13 +6,12 @@ alias -="cd -"
 alias d="cd ~/Docs/2014-2015"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias ls="ls -a --group-directories-first --color"
-alias cl="clear"
+alias ls="ls --group-directories-first --color"
 
 # The wifi driver is spotty
 alias res="sudo systemctl restart NetworkManager"
 
-alias v="vim"
+alias vim="gvim"
 alias python="python2"
 
 # Git
