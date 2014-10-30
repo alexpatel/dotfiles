@@ -6,7 +6,7 @@ alias -="cd -"
 alias d="cd ~/Docs/2014-2015"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias ls="ls --group-directories-first --color"
+alias ls="ls -a --group-directories-first --color"
 alias cl="clear"
 
 alias v="vim"
