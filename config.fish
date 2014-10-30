@@ -9,6 +9,9 @@ alias dl="cd ~/Downloads"
 alias ls="ls -a --group-directories-first --color"
 alias cl="clear"
 
+# The wifi driver is spotty
+alias res="sudo systemctl restart NetworkManager"
+
 alias v="vim"
 alias python="python2"
 
