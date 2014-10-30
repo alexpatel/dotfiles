@@ -1,4 +1,4 @@
-j Move between tabs
+" Move between tabs
 noremap <S-H> gT
 noremap <S-L> gt
 
