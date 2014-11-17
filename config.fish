@@ -1,5 +1,7 @@
 set fish_greeting ""
 
+alias python="python2"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
@@ -7,12 +9,13 @@ alias d="cd ~/Docs/2014-2015"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
 alias ls="ls --group-directories-first --color"
+alias cc="cd ~/Code/crimsononline"
 
-# The wifi driver is spotty
+# wifi driver is spotty
 alias res="sudo systemctl restart NetworkManager"
 
-alias vim="gvim"
-alias python="python2"
+# sync crimsononline with dev server
+alias sync="rsync -avz ~/Code/crimsononline alex@104.236.54.59:/home/alex"
 
 # Git
 alias g="git"
@@ -31,6 +34,7 @@ alias vdestroy="vagrant destroy"
 alias manage="bash vagrant_manage.sh"
 alias shell="bash vagrant_manage.sh shell_plus"
 
+# activate virtualenv
 function activate
         source ~/.venvs/$argv/bin/activate.fish
 end
