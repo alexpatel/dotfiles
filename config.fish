@@ -1,5 +1,8 @@
 set fish_greeting ""
 
+# transparency
+transset-df -a --dec .3 > /dev/null
+
 alias python="python2"
 
 alias ..="cd .."
