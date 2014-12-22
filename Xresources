@@ -1,7 +1,6 @@
-xterm*font: fixed
+xterm*font: *-fixed-*-*-*-16-*
 xterm*boldFont: fixed
 xterm*selectToClipBoard: true
 xterm*faceName: Source Code Pro 
-xterm*faceSize: 12
 xterm*rightScrollBar: true
 xterm*ScrollBar: true

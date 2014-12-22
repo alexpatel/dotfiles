@@ -28,7 +28,7 @@ font pango:Source Code Pro 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm -rv -e fish
+bindsym $mod+Return exec --no-startup-id xterm -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -1,14 +1,11 @@
 set fish_greeting ""
 
-# transparency
-transset-df -a --dec .3 > /dev/null
-
 alias python="python2"
 
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
-alias d="cd ~/Docs/2014-2015"
+alias d="cd ~/Docs"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
 alias ls="ls --group-directories-first --color"
