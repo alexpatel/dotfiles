@@ -1,6 +1,3 @@
-set fish_greeting ""
-
-alias python="python2"
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -34,7 +31,34 @@ alias vdestroy="vagrant destroy"
 alias manage="bash vagrant_manage.sh"
 alias shell="bash vagrant_manage.sh shell_plus"
 
+# Languages 
+## Python
+alias python="python2"
+
 # activate virtualenv
 function activate
-        source ~/.venvs/$argv/bin/activate.fish
+    source ~/.venvs/$argv/bin/activate.fish
+end
+
+## Haskell
+set PATH ~/.cabal/bin $PATH
+
+## Fish
+set fish_greeting ""
+
+# Applications 
+
+## Pandoc
+# pandoc markdown > pdf
+function md2pdf
+    switch (count $argv)
+        case 2
+            pandoc -N --template=$argv[1] --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt --variable version=1.10 README --latex-engine=xelatex --toc -o $argv[1] 
+        case 3
+            pandoc -N --template=$argv[1] --variable mainfont=Georgia --variable sansfont=Arial --variable monofont="Bitstream Vera Sans Mono" --variable fontsize=12pt --variable version=1.10 README --latex-engine=xelatex --toc -o $argv[2] 
+        case 1
+            echo "One (input filename) or two arguments (input/output filenames) required."
+        case '*'
+            echo "One (input filename) or two arguments (input/output filenames) required."
+    end
 end
