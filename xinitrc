@@ -12,8 +12,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # background and xterm transparency
-# feh --bg-scale Wallpapers/MeganFox.jpg
-xcompmgr -c & 
+# xcompmgr -c & 
 # i3bar refresh
 syndaemon -d -i 0.1s -k
 # keyboard config
