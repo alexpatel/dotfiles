@@ -22,6 +22,9 @@ alias gc="git commit -am"
 alias gpush="git push"
 alias gpull="git pull"
 
+# CVS
+set -gx CVS_RSH ssh 
+
 # Vagrant
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
