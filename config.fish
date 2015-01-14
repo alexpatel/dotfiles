@@ -1,4 +1,3 @@
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
@@ -6,13 +5,16 @@ alias d="cd ~/Docs"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
 alias ls="ls --group-directories-first --color"
-alias cc="cd ~/Code/crimsononline"
 
 # wifi driver is spotty
 alias res="sudo systemctl restart NetworkManager"
 
 # sync crimsononline with dev server
-alias sync="rsync -avz ~/Code/crimsononline alex@104.236.54.59:/home/alex"
+alias sync="rsync -avz -e ssh"
+
+# Alsamixer
+alias mute="amixer set Master mute"
+alias unmute="amixer set Master unmute"
 
 # Git
 alias g="git"
