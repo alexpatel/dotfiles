@@ -23,6 +23,7 @@ alias gpull="git pull"
 
 # CVS
 set -gx CVS_RSH ssh 
+set -gx CVSROOT $HOME/Code/gnu/www
 
 # Vagrant
 alias vup="vagrant up"

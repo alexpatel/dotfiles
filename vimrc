@@ -52,7 +52,7 @@ set incsearch								" Search as chars are entered
 
 " Unhighlight search results
 nmap <silent> <leader>n :silent nohl<cr>
-j
+
 " Number of matches to last search term
 nmap <leader># :%s<C-R>/::gn<cr>
 
@@ -96,4 +96,8 @@ set undofile
 set undodir=$HOME/.vim/undodir
 
 " NERDTree
-let NERDTreeIngore = ['\.pyc']
+let NERDTreeIngore = ['\.pyc$']
+
+" Split
+set splitbelow
+set splitright
