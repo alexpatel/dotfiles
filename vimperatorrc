@@ -1,5 +1,8 @@
 let mapleader=","							
 
+" Highlight location bar  
+noremap l <c-l>
+
 " Move between tabs
 noremap <S-H> gT
 noremap <S-L> gt
