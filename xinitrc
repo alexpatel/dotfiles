@@ -13,9 +13,9 @@ fi
 
 # i3bar refresh
 syndaemon -d -i 0.1s -k
-# keyboard config
+# keyboard 
 xbindkeys
-/usr/bin/xmodmap $HOME/.Xmodmap
+# xterm 
 [[ -f ~/.Xresources ]] && xrdb - merge ~/.Xresources
 # loading X11 fonts
 FontPath /usr/share/fonts/100dpi
