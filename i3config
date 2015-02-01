@@ -27,6 +27,9 @@ font pango:Source Code Pro 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# toggle border type
+bindsym $mod+b border toggle
+
 # start a terminal
 bindsym $mod+Return exec --no-startup-id xterm -rv -e fish
 
@@ -152,7 +155,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        position bottom
+        position top 
         mode dock
         colors {
             background #2C2D2E
@@ -164,21 +167,21 @@ bar {
 }
 
 # window colors
-# class                 border  backgr. text    indicator
-client.focused          #4c7899 #073642 #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #5f676a #ffffff #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+# class                  border  backgr. text    indicator
+client.unfocused         #333333 #5f676a #ffffff #292d2e
+client.urgent            #2f343a #900000 #ffffff #900000
 
-# class                     border  backgr. text    indicator
-#client.focused              #ffffff #707678 #FFFF50 #AACCBB
-#client.focused_inactive     #707678 #2C2D2E #ffffff #707678
-#client.unfocused            #707678 #2C2D2E #ffffff #707678
-#client.urgent               #FEA63C #4D4D4D #ffffff #FFE863
+# purple
+client.focused           #707090 #50506F #EEEEEE
+client.focused_inactive  #333333 #5F676A #EEEEEE
 
+# blue
+#client.focused          #708090 #506070 #EEEEEE
+#client.focused_inactive #333333 #5F676A #EEEEEE
 
 # don't follow mouse
 focus_follows_mouse no
 
-# open wifi applet
+# startup 
 exec --no-startup-id nm-applet
+exec --no-startup-id xbindkeys 
