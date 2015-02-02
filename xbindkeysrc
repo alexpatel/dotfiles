@@ -5,12 +5,12 @@
    F1 
 
 #Decrease Volume
-"amixer set Master 10- unmute"
+"amixer set Master 5- unmute"
    m:0x0 + c:68
    F2 
 
 #Increase Volume
-"amixer set Master 10+ unmute"
+"amixer set Master 5+ unmute"
    m:0x0 + c:69
    F3 
 

@@ -4,7 +4,7 @@ alias -="cd -"
 alias d="cd ~/Docs"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias ls="ls --group-directories-first --color"
+alias ls="ls --group-directories-first --color=auto"
 
 # wifi driver is spotty
 alias res="sudo systemctl restart NetworkManager"

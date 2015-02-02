@@ -185,3 +185,4 @@ focus_follows_mouse no
 # startup 
 exec --no-startup-id nm-applet
 exec --no-startup-id xbindkeys 
+exec --no-startup-id xsetroot -solid "#133B47"

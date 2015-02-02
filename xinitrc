@@ -11,14 +11,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-# i3bar refresh
-syndaemon -d -i 0.1s -k
-# keyboard 
-xbindkeys
 # xterm 
 [[ -f ~/.Xresources ]] && xrdb - merge ~/.Xresources
 # loading X11 fonts
 FontPath /usr/share/fonts/100dpi
+# i3 wm
 exec i3
 
 
