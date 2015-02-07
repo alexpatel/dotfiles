@@ -167,13 +167,19 @@ bar {
 }
 
 # window colors
+client.background        #000000
+
 # class                  border  backgr. text    indicator
-client.unfocused         #333333 #5f676a #ffffff #292d2e
+client.unfocused         #000000 #000000 #ffffff #292d2e
 client.urgent            #2f343a #900000 #ffffff #900000
 
 # purple
-client.focused           #707090 #50506F #EEEEEE
-client.focused_inactive  #333333 #5F676A #EEEEEE
+#client.focused           #000000 #50506F #EEEEEE
+#client.focused_inactive  #000000 #5F676A #EEEEEE
+
+# light purple
+client.focused           #000000 #6C6C96 #EEEEEE
+client.focused_inactive  #000000 #7E8587 #EEEEEE
 
 # blue
 #client.focused          #708090 #506070 #EEEEEE
@@ -182,8 +188,12 @@ client.focused_inactive  #333333 #5F676A #EEEEEE
 # don't follow mouse
 focus_follows_mouse no
 
+# new window has no border
+new_window pixel 4 
+hide_edge_borders vertical
+
 # startup 
 exec --no-startup-id nm-applet
 exec --no-startup-id xbindkeys 
 exec --no-startup-id xsetroot -solid "#133B47"
-exec --no-startup-id xautolock -time 10 -notify 10 -locker i3lock -n -c 133B47 & 
+exec --no-startup-id xautolock -time 10 -notify 30 -locker i3lock -n -c 133B47 & 
