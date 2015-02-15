@@ -8,7 +8,7 @@ function vm161
         switch "$argv[1]"
             case start
                 VBoxHeadless --startvm "$vm" &
-            case stop 
+            case stop
                 VBoxManage controlvm "$vm" poweroff
             case pause 
                 VBoxManage controlvm "$vm" pause 
@@ -16,8 +16,11 @@ function vm161
                 VBoxManage controlvm "$vm" reset 
             case ssh
                 ssh jharvard@192.168.56.102
+            case status
+                # TODO
+                vboxmanage list runningvms
         end
     else 
-        echo "Usage: vm161 [start|stop|pause|reset|ssh]"
+        echo "Usage: vm161 [start|stop|pause|reset|ssh|status]"
     end
 end
