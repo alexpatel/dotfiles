@@ -158,11 +158,11 @@ bar {
         position top 
         mode dock
         colors {
-            background #2C2D2E
-            statusline #eee8d5
-            focused_workspace  #2b6cc4 #2b6cc4  #ffffff
-            active_workspace   #444444 #444444  #ffffff
-            inactive_workspace #444444 #444444  #ffffff
+            background #0c203a
+            statusline #d4e1f3
+            focused_workspace  #2b6cc4 #2b6cc4  #e9f0f9
+            active_workspace   #444444 #444444  #aac4e7
+            inactive_workspace #444444 #444444  #aac4e7
         }
 }
 
