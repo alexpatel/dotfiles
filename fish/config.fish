@@ -1,19 +1,19 @@
+set fish_greeting ""
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
 alias d="cd ~/Docs"
 alias c="cd ~/Code"
 alias dl="cd ~/Downloads"
-alias ls="ls --group-directories-first --color=auto"
+
+# ls
+alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # wifi driver is spotty
 alias res="sudo systemctl restart NetworkManager"
 
-# Alsamixer
-alias mute="amixer set Master mute"
-alias unmute="amixer set Master unmute"
-
-# Git
+# git
 alias g="git"
 alias gs="git status"
 alias ga="git add"
@@ -25,19 +25,19 @@ alias gpull="git pull"
 set -gx CVS_RSH ssh 
 set -gx CVSROOT $HOME/Code/gnu/www
 
-# Vagrant
+# vagrant
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
 alias vr="vagrant reload"
 alias vdestroy="vagrant destroy"
 
-# Languages 
-## Python
+# python
 alias python="python2"
 
-## Haskell
-set PATH ~/.cabal/bin $PATH
-
-## Fish
-set fish_greeting ""
+# start X at login
+if status --is-login
+    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+        exec startx
+    end
+end
