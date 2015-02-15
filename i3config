@@ -31,7 +31,7 @@ floating_modifier $mod
 bindsym $mod+b border toggle
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xterm -rv -e fish
+bindsym $mod+Return exec --no-startup-id xterm -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -160,37 +160,36 @@ bar {
         colors {
             background #2C2D2E
             statusline #eee8d5
-            focused_workspace #AACCBB #ffffff #707678
-            active_workspace  #AACCBB #ffffff #707678
-            inactive_workspace #AACCBB #2C2D2E #AACCBB
+            focused_workspace  #2b6cc4 #2b6cc4  #ffffff
+            active_workspace   #444444 #444444  #ffffff
+            inactive_workspace #444444 #444444  #ffffff
         }
 }
 
 # window colors
-client.background        #000000
+client.background             #000000
 
-# class                  border  backgr. text    indicator
-client.unfocused         #000000 #000000 #ffffff #292d2e
-client.urgent            #2f343a #900000 #ffffff #900000
+# class                       border  backgr.    text
+client.unfocused              #444444 #444444  #315858
+client.focused_inactive       #444444 #444444  #315858
+client.urgent                 #383a3b #383a3b  #ee0000
 
-# purple
-#client.focused           #000000 #50506F #EEEEEE
-#client.focused_inactive  #000000 #5F676A #EEEEEE
+## lime green 
+#client.focused               #9fbc00 #9fbc00  #111111
+## blue 
+client.focused                #2b6cc4 #2b6cc4  #111111
+## red 
+#client.focused               #bf3f34 #bf3f34  #111111
+## light red 
+#client.focused               #cc5555 #cc5555  #111111
 
-# light purple
-client.focused           #000000 #6C6C96 #EEEEEE
-client.focused_inactive  #000000 #7E8587 #EEEEEE
-
-# blue
-#client.focused          #708090 #506070 #EEEEEE
-#client.focused_inactive #333333 #5F676A #EEEEEE
 
 # don't follow mouse
 focus_follows_mouse no
 
 # new window has no border
-new_window pixel 4 
-hide_edge_borders vertical
+new_window pixel 1 
+#hide_edge_borders both 
 
 # startup 
 exec --no-startup-id nm-applet
