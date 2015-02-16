@@ -1,6 +1,6 @@
 set fish_greeting ""
 
-alias ..="cd .."
+alias bd="cd .."
 alias ...="cd ../.."
 alias -="cd -"
 alias d="cd ~/Docs"

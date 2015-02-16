@@ -21,7 +21,7 @@ set modifiable                              " Change contents of any buffer
 
 " Color scheme
 set t_Co=256
-colorscheme jellybeans 
+colorscheme Tomorrow 
 syntax enable
 
 " Line numbers

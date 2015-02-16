@@ -1,11 +1,11 @@
-xterm*font: *-fixed-*-*-*-16-*
+xterm*font: fixed 
 xterm*boldFont: fixed
 xterm*selectToClipBoard: true
-xterm*faceName: Source Code Pro 
+xterm*faceName: DejaVu Sans Mono 
 
 *foreground: #e5e5e5 
 *background: #1d1d1d
-*cursorColor: #FFF9EC
+*cursorColor: #000000
 !Black
 *color0: #121212
 *color8: #2e3436
