@@ -101,3 +101,6 @@ let NERDTreeIngore = ['\.pyc$']
 " Split
 set splitbelow
 set splitright
+
+" Autocompile latex documents.
+autocmd BufWritePost *.tex silent! !pdflatex <afile> >/dev/null
