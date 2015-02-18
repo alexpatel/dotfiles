@@ -21,8 +21,9 @@ set modifiable                              " Change contents of any buffer
 
 " Color scheme
 set t_Co=256
-colorscheme Tomorrow 
+colorscheme wombat 
 syntax enable
+highlight CursorLine cterm=NONE ctermbg=grey ctermfg=black
 
 " Line numbers
 set number									
@@ -101,6 +102,3 @@ let NERDTreeIngore = ['\.pyc$']
 " Split
 set splitbelow
 set splitright
-
-" Autocompile latex documents.
-autocmd BufWritePost *.tex silent! !pdflatex <afile> >/dev/null
