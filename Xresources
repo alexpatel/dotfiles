@@ -1,7 +1,7 @@
 xterm*font: fixed 
 xterm*boldFont: fixed
 xterm*selectToClipBoard: true
-xterm*faceName: DejaVu Sans Mono 
+xterm*faceName: Inconsolata 
 
 *foreground: #e5e5e5 
 *background: #1d1d1d

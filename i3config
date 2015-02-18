@@ -15,7 +15,7 @@ set $mod Mod1
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 
+font pango:Inconsolata
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -188,7 +188,7 @@ client.focused                #2b6cc4 #2b6cc4  #111111
 focus_follows_mouse no
 
 # new window has no border
-new_window pixel 1 
+new_window pixel 2 
 #hide_edge_borders both 
 
 # startup 
