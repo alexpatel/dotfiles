@@ -7,7 +7,8 @@ function vm161
     if test (count $argv) = 1
         switch "$argv[1]"
             case start
-                VBoxHeadless --startvm "$vm" &
+                # detach from terminal and run in bg
+                nohup VBoxHeadless --startvm "$vm" &
             case stop
                 VBoxManage controlvm "$vm" poweroff
             case pause 
@@ -17,7 +18,6 @@ function vm161
             case ssh
                 ssh jharvard@192.168.56.102
             case status
-                # TODO
                 vboxmanage list runningvms
         end
     else 
