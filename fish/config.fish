@@ -35,9 +35,5 @@ alias vdestroy="vagrant destroy"
 # python
 alias python="python2"
 
-# start X at login
-if status --is-login
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        exec startx
-    end
-end
+# add cabal progs to path
+set PATH ~/.cabal/bin $PATH

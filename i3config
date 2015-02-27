@@ -31,7 +31,7 @@ floating_modifier $mod
 bindsym $mod+b border toggle
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xterm -e fish
+bindsym $mod+Return exec --no-startup-id xterm -rv -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill

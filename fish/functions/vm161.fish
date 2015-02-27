@@ -4,6 +4,8 @@
 
 function vm161
     set -l vm cs161
+    set -l user jharvard
+    set -l host 192.168.56.102
     if test (count $argv) = 1
         switch "$argv[1]"
             case start
@@ -16,9 +18,11 @@ function vm161
             case reset 
                 VBoxManage controlvm "$vm" reset 
             case ssh
-                ssh jharvard@192.168.56.102
+                ssh $user@$host
             case status
                 vboxmanage list runningvms
+            case mount
+                sshfs $user@$host:/home/jharvard/cs161 /home/alex/Docs/cs161/cs161 -o sshfs_sync
         end
     else 
         echo "Usage: vm161 [start|stop|pause|reset|ssh|status]"
