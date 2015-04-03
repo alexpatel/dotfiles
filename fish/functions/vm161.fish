@@ -10,7 +10,7 @@ function vm161
         switch "$argv[1]"
             case start
                 # detach from terminal and run in bg
-                nohup VBoxHeadless --startvm "$vm" &
+                nohup VBoxHeadless --startvm "$vm" > /dev/null 2>&1 &
             case stop
                 VBoxManage controlvm "$vm" poweroff
             case pause 
