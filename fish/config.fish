@@ -3,9 +3,9 @@ set fish_greeting ""
 alias bd="cd .."
 alias ...="cd ../.."
 alias -="cd -"
-alias d="cd ~/Docs"
-alias c="cd ~/Code"
-alias dl="cd ~/Downloads"
+alias d="cd ~/docs"
+alias c="cd ~/code"
+alias dl="cd ~/downloads"
 
 # ls
 alias ls="ls --indicator-style=classify --group-directories-first --color"
