@@ -98,7 +98,14 @@ set undodir=$HOME/.vim/undodir
 
 " NERDTree
 let NERDTreeIngore = ['\.pyc$']
-au VimEnter *  NERDTree
+function! NERDTreestartup()
+	if 0 == argc()
+		NERDTree
+	end
+endfunction
+
+autocmd VimEnter * call NERDTreestartup()
+
 
 " Split
 set splitbelow
