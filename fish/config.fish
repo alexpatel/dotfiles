@@ -15,6 +15,7 @@ alias res="sudo systemctl restart NetworkManager"
 
 # git
 alias g="git"
+alias gl="git lg"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -am"
