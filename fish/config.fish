@@ -19,6 +19,7 @@ alias gl="git lg"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -am"
+alias gco="git checkout"
 alias gpush="git push"
 alias gpull="git pull"
 
