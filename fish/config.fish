@@ -6,19 +6,15 @@ alias -="cd -"
 alias d="cd ~/docs"
 alias c="cd ~/code"
 alias dl="cd ~/downloads"
-
-# ls
 alias ls="ls --indicator-style=classify --group-directories-first --color"
-
-# wifi driver is spotty
-alias res="sudo systemctl restart NetworkManager"
 
 # git
 alias g="git"
 alias gl="git lg"
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit -am"
+alias gc="git commit"
+alias gd="git diff"
 alias gco="git checkout"
 alias gpush="git push"
 alias gpull="git pull"
@@ -34,8 +30,11 @@ alias vssh="vagrant ssh"
 alias vr="vagrant reload"
 alias vdestroy="vagrant destroy"
 
+alias manage="bash vagrant_manage.sh"
+
 # python
 alias python="python2"
 
-# add cabal progs to path
-set PATH ~/.cabal/bin $PATH
+# os161
+set CS161 $HOME/docs/cs161
+set PATH $CS161/cs161/sys161/bin $CS161/cs161/tools/bin $PATH
