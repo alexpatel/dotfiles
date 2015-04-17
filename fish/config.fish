@@ -10,9 +10,9 @@ alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # git
 alias g="git"
-alias gl="git lg"
 alias gs="git status"
 alias ga="git add"
+alias gl="git log --graph --abbrev-commit --decorate --date=relative --all"
 alias gc="git commit"
 alias gd="git diff"
 alias gco="git checkout"
