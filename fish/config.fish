@@ -40,3 +40,10 @@ set CS161 $HOME/docs/cs161
 set PATH $CS161/cs161/sys161/bin $CS161/cs161/tools/bin $PATH
 
 set PATH /usr/local/bin $PATH
+
+# Start X at login
+if status --is-login
+	if test -z "$DISPLAY" -a $XDG_VTNR = 1
+		exec startx -- -keeptty >~/.xorg.log ^&1
+	end
+end
