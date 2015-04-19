@@ -16,8 +16,8 @@ alias gl="git log --graph --abbrev-commit --decorate --date=relative --all"
 alias gc="git commit"
 alias gd="git diff"
 alias gco="git checkout"
-alias gpush="git push"
-alias gpull="git pull"
+alias gps="git push"
+alias gpl="git pull"
 
 # CVS
 set -gx CVS_RSH ssh 
