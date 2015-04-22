@@ -10,6 +10,7 @@ declare -A map=(
 	["xinitrc"]="$HOME/.xinitrc"
 	["Xresources"]="$HOME/.Xresources"
 	["fish"]="$HOME/.config/fish"
+	["dunstrc"]="$HOME/.config/dunst/dunstrc"
 )
 
 for f in "${!map[@]}"; do ln -s "$(pwd)/$f" ${map[$f]}; done
