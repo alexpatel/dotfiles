@@ -29,6 +29,7 @@ alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
 alias vr="vagrant reload"
 alias vdestroy="vagrant destroy"
+alias vreload="vagrant reload"
 
 alias manage="bash vagrant_manage.sh"
 
