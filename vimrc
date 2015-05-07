@@ -111,4 +111,7 @@ set splitbelow
 set splitright
 
 " 80 columns
-set textwidth=80
+au BufRead,BufNewFile *.txt setlocal textwidth=80
+
+" tagbar
+noremap <leader>b :TagbarToggle<CR>
