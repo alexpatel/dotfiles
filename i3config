@@ -158,11 +158,14 @@ bar {
         position top 
         mode dock
         colors {
-            background #0c203a
+            background #000000
             statusline #ffffff
-            focused_workspace  #2b6cc4 #2b6cc4  #e9f0f9
-            active_workspace   #444444 #444444  #aac4e7
-            inactive_workspace #444444 #444444  #aac4e7
+            # focused_workspace  #2b6cc4 #2b6cc4  #e9f0f9
+            # active_workspace   #444444 #444444  #aac4e7
+            # inactive_workspace #444444 #444444  #aac4e7
+            focused_workspace  #ffffff #707070 #ffffff
+            active_workspace   #ffffff #000000 #ffffff
+            inactive_workspace #ffffff #000000 #ffffff
         }
 }
 
@@ -170,14 +173,15 @@ bar {
 client.background             #000000
 
 # class                       border  backgr.    text
-client.unfocused              #444444 #444444  #315858
-client.focused_inactive       #444444 #444444  #315858
-client.urgent                 #383a3b #383a3b  #ee0000
+client.unfocused		#707070 #707070 #ffffff
+client.focused_inactive		#000000 #000000 #ffffff
+client.urgent			#000000 #000000 #ffffff
+client.focused			#707070 #707070 #ffffff
 
 ## lime green 
 #client.focused               #9fbc00 #9fbc00  #111111
 ## blue 
-client.focused                #2b6cc4 #2b6cc4  #111111
+#client.focused                #2b6cc4 #2b6cc4  #111111
 ## red 
 #client.focused               #bf3f34 #bf3f34  #111111
 ## light red 
@@ -194,5 +198,5 @@ new_window pixel 2
 # startup 
 exec --no-startup-id nm-applet
 exec --no-startup-id xbindkeys 
-exec --no-startup-id xsetroot -solid "#133B47"
+exec --no-startup-id xsetroot -solid "#808080
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/slock.sh' &
