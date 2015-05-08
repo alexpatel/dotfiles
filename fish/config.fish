@@ -5,6 +5,7 @@ alias ...="cd ../.."
 alias -="cd -"
 alias d="cd ~/docs"
 alias c="cd ~/code"
+alias df="cd ~/code/dotfiles"
 alias dl="cd ~/downloads"
 alias ls="ls --indicator-style=classify --group-directories-first --color"
 
