@@ -21,9 +21,11 @@ set modifiable								" Change contents of any buffer
 
 " Color scheme
 set t_Co=256
-colorscheme wombat 
+colorscheme jellybeans
 syntax enable
 highlight CursorLine term=bold cterm=bold guibg=Grey40
+highlight LineNr ctermfg=grey
+highlight CursorLineNr ctermfg=white
 
 " Line numbers
 set number									
