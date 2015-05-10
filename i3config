@@ -173,10 +173,10 @@ bar {
 client.background             #000000
 
 # class                       border  backgr.    text
-client.unfocused		#707070 #707070 #ffffff
-client.focused_inactive		#000000 #000000 #ffffff
-client.urgent			#000000 #000000 #ffffff
-client.focused			#707070 #707070 #ffffff
+client.unfocused	      #ffffff #707070 #ffffff
+client.focused_inactive	      #000000 #000000 #ffffff
+client.urgent		      #000000 #000000 #ffffff
+client.focused		      #ffffff #ffffff #ffffff
 
 ## lime green 
 #client.focused               #9fbc00 #9fbc00  #111111
@@ -192,7 +192,7 @@ client.focused			#707070 #707070 #ffffff
 focus_follows_mouse no
 
 # new window has no border
-new_window pixel 2 
+new_window pixel 1
 #hide_edge_borders both 
 
 # startup 
