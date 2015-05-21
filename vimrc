@@ -90,6 +90,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 noremap <S-H> gT
 noremap <S-L> gt
 
+" Move around sentences
+noremap <S-J> (
+noremap <S-K> )
+
 " Fast vertical movement
 noremap <c-j> 10j
 noremap <c-k> 10k 
