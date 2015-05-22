@@ -7,7 +7,7 @@ alias d="cd ~/docs"
 alias c="cd ~/code"
 alias df="cd ~/code/dotfiles"
 alias dl="cd ~/downloads"
-alias ls="ls --indicator-style=classify --group-directories-first --color"
+# alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # git
 alias g="git"
@@ -19,6 +19,9 @@ alias gd="git diff"
 alias gco="git checkout"
 alias gps="git push"
 alias gpl="git pull"
+alias grb="git rebase -i"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 # CVS
 set -gx CVS_RSH ssh 
