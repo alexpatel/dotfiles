@@ -31,6 +31,7 @@ set -gx CVSROOT $HOME/Code/gnu/www
 # vagrant
 alias vu="vagrant up"
 alias vh="vagrant halt"
+alias vs="vagrant status"
 alias vssh="vagrant ssh"
 alias vr="vagrant reload"
 alias vds="vagrant destroy"
