@@ -22,6 +22,9 @@ alias gpl="git pull"
 alias gra="git rebase --abort"
 alias grb="git rebase -i"
 alias grc="git rebase --continue"
+alias grs="git reset --soft"
+alias grh="git reset --hard"
+alias grc="git rebase --continue"
 alias gs="git status"
 
 # CVS
