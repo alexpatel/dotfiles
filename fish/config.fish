@@ -37,14 +37,8 @@ alias vr="vagrant reload"
 alias vds="vagrant destroy"
 alias vrl="vagrant reload"
 
-alias manage="bash vagrant_manage.sh"
-
 # python
 #alias python="python2"
-
-# os161
-set CS161 $HOME/docs/cs161
-set PATH $CS161/cs161/sys161/bin $CS161/cs161/tools/bin $PATH
 
 set PATH /usr/local/bin $PATH
 
