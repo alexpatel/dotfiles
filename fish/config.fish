@@ -14,7 +14,7 @@ alias g="git"
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit"
-alias gd="git diff"
+alias gd="git difftool --tool=vimdiff --no-prompt"
 alias gco="git checkout"
 alias gl="git log --graph --abbrev-commit --decorate --date=relative --all --stat"
 alias gls="git log --graph --abbrev-commit --decorate --date=relative --all -3"
@@ -34,7 +34,7 @@ set -gx CVS_RSH ssh
 set -gx CVSROOT $HOME/Code/gnu/www
 
 # vagrant
-alias vu="vagrant up"
+alias vup="vagrant up"
 alias vh="vagrant halt"
 alias vs="vagrant status"
 alias vssh="vagrant ssh"
@@ -46,6 +46,7 @@ alias vrl="vagrant reload"
 #alias python="python2"
 
 set PATH /usr/local/bin $PATH
+set PYTHONPATH /Users/apatel/Code/cerberus/cerberus $PYTHONPATH
 
 # Start X at login
 if status --is-login
