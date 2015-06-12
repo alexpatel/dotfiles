@@ -11,6 +11,7 @@ declare -A map=(
 	["xinitrc"]="$HOME/.xinitrc"
 	["Xresources"]="$HOME/.Xresources"
 	["fish"]="$HOME/.config/fish"
+	["fish_config"]="$HOME/.config/fish/config.fish"
 	["dunstrc"]="$HOME/.config/dunst/dunstrc"
 )
 
