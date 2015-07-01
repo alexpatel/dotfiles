@@ -24,7 +24,8 @@ set directory=~/.vim/tmp,.
 
 " Color scheme
 set t_Co=256
-colorscheme jellybeans
+highlight Normal ctermfg=black ctermbg=white
+colorscheme wombat
 syntax enable
 highlight CursorLine term=bold cterm=bold guibg=Grey40
 highlight LineNr ctermfg=grey
