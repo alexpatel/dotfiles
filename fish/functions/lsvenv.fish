@@ -1,3 +1,3 @@
 function lsvenv 
-    ls $HOME/venvs/
+    ls $HOME/.venvs/
 end

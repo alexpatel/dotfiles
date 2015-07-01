@@ -3,10 +3,10 @@ set fish_greeting ""
 alias bd="cd .."
 alias ...="cd ../.."
 alias -="cd -"
-alias d="cd ~/Documents"
-alias c="cd ~/Code"
-alias df="cd ~/Code/dotfiles"
-alias dl="cd ~/Downloads"
+alias d="cd ~/documents"
+alias c="cd ~/code"
+alias df="cd ~/code/dotfiles"
+alias dl="cd ~/downloads"
 
 # git
 alias g="git"
@@ -31,7 +31,7 @@ alias gs="git status"
 
 # CVS
 set -gx CVS_RSH ssh 
-set -gx CVSROOT $HOME/Code/gnu/www
+set -gx CVSROOT $HOME/code/gnu/www
 
 # vagrant
 alias vup="vagrant up"
