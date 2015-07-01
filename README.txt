@@ -11,8 +11,8 @@ This repository contains my personal computer configuration files. I currently
 use: 
 
 	* Cinnamon Desktop Environment
-	* Fish Shell
-	* Vim
+	* fish shell
+	* vim
 	* iceweasel + vimperrator
 
 ### Branches ### 
