@@ -2,3 +2,4 @@ vim/undodir
 vim/swapdir
 fish/fish_history
 fish/fishd.patel
+fish/fishd.*
