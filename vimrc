@@ -16,8 +16,11 @@ set showcmd								" Show partial command as it's being typed
 set linebreak								" Don't wrap text in middle of word
 set directory=$HOME/.vim/swapdir					" Swapfile storage dir
 set clipboard=unnamed							" Access X11 Clipboard by default
-set nobackup								" No backup files 
 set modifiable								" Change contents of any buffer 
+
+" Backup directory
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
 
 " Color scheme
 set t_Co=256
