@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/apatel/Code/cerberus/cerberus/utils'
-let g:netrw_dirhist_2='/Users/apatel/Code/cerberus/cerberus/middleware'
-let g:netrw_dirhist_3='/Users/apatel/Code/cerberus/cerberus'
-let g:netrw_dirhist_4='/Users/apatel/Code/cerberus/cerberus/server'
-let g:netrw_dirhist_5='/Users/apatel/Code/cerberus/cerberus'
-let g:netrw_dirhist_6='/Users/apatel/Code/cerberus/cerberus/utils'
-let g:netrw_dirhist_7='/Users/apatel/Code/dotfiles/fish'

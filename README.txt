@@ -1,9 +1,9 @@
-			## Personal Computer Dotfiles ##
+## Personal Computer Dotfiles ##
 
-				* What is it?
-				* Branches
-				* Installation Notes
-				* License
+* What is it?
+* Branches
+* Installation Notes
+* License
 
 ### What is it? ### 
 
@@ -11,24 +11,24 @@ This repository contains my personal computer configuration files. I currently
 use: 
 
 	* Cinnamon Desktop Environment
-	* fish shell
-	* vim
-	* iceweasel + vimperrator
+	* Fish shell
+	* Vim
+	* Iceweasel + Vimperrator
 
 ### Branches ### 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++
-| Branch | Description				|
-+++++++++++++++++++++++++++++++++++++++++++++++++
-| carbon | Lenovo X1 Carbon 34442DU		|
-|	 | Debian "jessie" (stable), Linux 3.16	|
--------------------------------------------------
-| t440s  | Lenovo T400s				|
-|	 | Arch Linux, Linux 3.19		|
--------------------------------------------------
-| chrome | Acer Chromebook C720 		| 
-|	 | Arch Linux, Linux 3.19		|
--------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| Branch | Description				      |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+| carbon | Lenovo X1 Carbon 34442DU		      |
+|	 | Debian "jessie" (stable), Linux 3.16	      |
+-------------------------------------------------------
+| t440s  | Lenovo T400s				      |
+|	 | Arch Linux, Linux 3.19		      |
+-------------------------------------------------------
+| chrome | Acer Chromebook C720 		      | 
+|	 | Arch Linux, Linux 3.19		      |
+-------------------------------------------------------
 
 ### Installation ###
 

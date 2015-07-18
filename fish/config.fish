@@ -51,7 +51,9 @@ alias vrl="vagrant reload"
 #alias python="python2"
 
 set PATH /usr/local/bin $PATH
-set PYTHONPATH /Users/apatel/Code/cerberus/cerberus $PYTHONPATH
+
+set --export CLICOLOR 1
+set --export LSCOLORS gxBxhxDxfxhxhxhxhxcxcx
 
 # Start X at login
 if status --is-login
@@ -59,6 +61,3 @@ if status --is-login
 		exec startx -- -keeptty >~/.xorg.log ^&1
 	end
 end
-
-set --export CLICOLOR 1
-set --export LSCOLORS gxBxhxDxfxhxhxhxhxcxcx

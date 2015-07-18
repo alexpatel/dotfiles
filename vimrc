@@ -45,7 +45,7 @@ set autowrite
 
 " Tabs
 set smarttab
-set noexpandtab
+set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -115,6 +115,7 @@ function! NERDTreestartup()
 endfunction
 
 autocmd VimEnter * call NERDTreestartup()
+noremap nt :NERDTreeToggle<CR>
 
 " Split
 set splitbelow
@@ -124,4 +125,4 @@ set splitright
 au BufRead,BufNewFile *.txt setlocal textwidth=80
 
 " tagbar
-noremap <leader>b :TagbarToggle<CR>
+noremap tb :TagbarToggle<CR>

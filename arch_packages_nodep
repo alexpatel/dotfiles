@@ -19,7 +19,6 @@ fakeroot
 feh
 firefox
 fish
-flashplugin
 flex
 fltk
 fontforge
@@ -83,7 +82,6 @@ otf-exo
 patch
 pcmciautils
 pkg-config
-popcorntime-bin
 prelink
 python2-pyxattr
 python-matplotlib
@@ -116,7 +114,6 @@ usbutils
 vagrant
 vi
 vim
-virtualbox
 vlc
 wget
 xautolock

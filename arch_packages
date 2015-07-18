@@ -544,7 +544,6 @@ pinentry 0.9.0-1
 pixman 0.32.6-1
 pkg-config 0.28-2
 polkit 0.112-2
-popcorntime-bin 0.3.7.1-1
 poppler 0.32.0-1
 poppler-glib 0.32.0-1
 popt 1.16-7
@@ -666,8 +665,6 @@ vi 1:050325-4
 videoproto 2.3.2-1
 vim 7.4.663-2
 vim-runtime 7.4.663-2
-virtualbox 4.3.26-2
-virtualbox-host-modules 4.3.26-5
 vlc 2.2.0-2
 wayland 1.7.0-1
 webkitgtk2 2.4.8-2
