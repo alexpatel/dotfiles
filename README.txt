@@ -10,17 +10,24 @@
 This repository contains my personal computer configuration files. I currently
 use: 
 
-	* Cinnamon Desktop Environment
-	* Fish shell
-	* Vim
-	* Iceweasel + Vimperrator
+    Hardware:
+
+        * Lenovo X1 Carbon 34442DU
+
+    Software
+
+        * Debian "jessie" (stable)
+        * Cinnamon Desktop Environment
+        * Fish shell
+        * Vim
+        * Iceweasel + Vimperrator
 
 ### Branches ### 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 | Branch | Description				      |
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-| carbon | Lenovo X1 Carbon 34442DU		      |
+| master | Lenovo X1 Carbon 34442DU		      |
 |	 | Debian "jessie" (stable), Linux 3.16	      |
 -------------------------------------------------------
 | t440s  | Lenovo T400s				      |

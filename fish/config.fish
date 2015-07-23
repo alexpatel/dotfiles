@@ -1,5 +1,10 @@
 set fish_greeting ""
 
+set PATH /usr/local/bin $PATH
+set --export CLICOLOR 1
+set --export LSCOLORS gxBxhxDxfxhxhxhxhxcxcx
+
+# movement
 alias bd="cd .."
 alias ...="cd ../.."
 alias -="cd -"
@@ -7,15 +12,17 @@ alias d="cd ~/documents"
 alias c="cd ~/code"
 alias df="cd ~/code/dotfiles"
 alias dl="cd ~/downloads"
+alias ls="ls --indicator-style=classify --group-directories-first --color"
 
-# git
+# Git
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit --verbose"
 alias gd="git difftool --tool=vimdiff --no-prompt"
 alias gco="git checkout"
-alias gf="git fetch --all"
+alias gf="git fetch"
+alias gfa="git fetch --all"
 alias gl="git log --graph --abbrev-commit --decorate --date=relative --all --stat"
 alias gls="git log --graph --abbrev-commit --decorate --date=relative --all --stat -3"
 alias glo="git log --oneline"
@@ -38,8 +45,8 @@ alias gstl="git stash list"
 set -gx CVS_RSH ssh 
 set -gx CVSROOT $HOME/code/gnu/www
 
-# vagrant
-alias vup="vagrant up"
+# Vagrant
+alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vs="vagrant status"
 alias vssh="vagrant ssh"
@@ -49,11 +56,6 @@ alias vrl="vagrant reload"
 
 # python
 #alias python="python2"
-
-set PATH /usr/local/bin $PATH
-
-set --export CLICOLOR 1
-set --export LSCOLORS gxBxhxDxfxhxhxhxhxcxcx
 
 # Start X at login
 if status --is-login
