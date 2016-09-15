@@ -6,16 +6,16 @@ call pathogen#helptags()
 let mapleader=","							" Change leader from \ to ,
 set nocompatible							" No Vi compatibility
 set whichwrap+=h,l							" Allow movement onto next/prev line with 'h, l' 
-set backspace=indent,eol,start						" Allow backspace in insert mode
+set backspace=indent,eol,start				" Allow backspace in insert mode
 set cursorline								" Highlight cursorline
 set mouse=nv								" Allow mouse in normal mode
-set ruler								" Show cursor position
+set ruler								    " Show cursor position
 set shortmess=atI							" Don't show intro message
 set title		        					" Show filename in window titlebar
-set showcmd								" Show partial command as it's being typed
+set showcmd								    " Show partial command as it's being typed
 set linebreak								" Don't wrap text in middle of word
-set directory=$HOME/.vim/swapdir					" Swapfile storage dir
-set clipboard=unnamed							" Access X11 Clipboard by default
+set directory=$HOME/.vim/swapdir			" Swapfile storage dir
+set clipboard=unnamed						" Access X11 Clipboard by default
 set modifiable								" Change contents of any buffer 
 
 " Backup directory
@@ -23,13 +23,19 @@ set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
 " Color scheme
-set t_Co=256
-highlight Normal ctermfg=black ctermbg=white
-colorscheme wombat
-syntax enable
-highlight CursorLine term=bold cterm=bold guibg=Grey40
-highlight LineNr ctermfg=grey
-highlight CursorLineNr ctermfg=white
+" set t_Co=256
+" highlight Normal ctermfg=black ctermbg=white
+" colorscheme late_evening
+" syntax enable
+" highlight CursorLine term=bold cterm=bold guibg=Grey40
+" highlight LineNr ctermfg=grey
+" 
+"au WinLeave * set nocursorline nocursorcolumn
+" au WinEnter * set cursorline cursorcolumn
+" set cursorline cursorcolumn
+" au WinLeave * set nocursorline nocursorcolumn
+" au WinEnter * set cursorline cursorcolumn
+" set cursorline cursorcolumn
 
 " Line numbers
 set number									
@@ -126,3 +132,7 @@ au BufRead,BufNewFile *.txt setlocal textwidth=80
 
 " tagbar
 noremap tb :TagbarToggle<CR>
+
+" ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
