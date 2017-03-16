@@ -20,6 +20,7 @@ alias c="cd ~/Code"
 alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
+alias src="source ~/.bashrc"
 #alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # Git
