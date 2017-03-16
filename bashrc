@@ -19,6 +19,7 @@ alias d="cd ~/Dropbox/2016-2017"
 alias c="cd ~/Code"
 alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
+alias cs="cd ~/Dropbox/2016-2017/cs161"
 #alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # Git
@@ -54,8 +55,10 @@ alias vh="vagrant halt"
 alias vs="vagrant status"
 alias vssh="vagrant ssh"
 alias vr="vagrant reload"
-alias vds="vagrant destroy"
+alias vd="vagrant destroy"
 alias vrl="vagrant reload"
+alias vdu="vagrant destroy && vagrant up"
 
 # python
 #alias python="python2"
+alias pyc="find . -name '*.pyc' -delete"
