@@ -1,7 +1,7 @@
 # filesystem movement
 alias bd="cd .."
 alias "..."="cd ../.."
-#alias -="cd -"
+alias -="cd -"
 alias d="cd ~/Dropbox/2016-2017"
 alias c="cd ~/code"
 alias df="cd ~/code/dotfiles"
@@ -13,7 +13,7 @@ alias src="source ~/.bashrc"
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-lias ls="ls --indicator-style=classify --group-directories-first --color"
+alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # aptitude
 alias apt="sudo apt-get"
