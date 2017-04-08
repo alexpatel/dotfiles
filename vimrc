@@ -1,4 +1,4 @@
-filetype plugin indent on					
+filetype plugin indent on
 
 call pathogen#infect()
 call pathogen#helptags()
