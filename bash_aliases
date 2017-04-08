@@ -1,25 +1,24 @@
 # filesystem movement
 alias bd="cd .."
 alias "..."="cd ../.."
-alias -="cd -"
+#alias -="cd -"
 alias d="cd ~/Dropbox/2016-2017"
-alias c="cd ~/code"
-alias df="cd ~/code/dotfiles"
-alias dl="cd ~/downloads"
+alias c="cd ~/Code"
+alias df="cd ~/Code/dotfiles"
+alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
 alias src="source ~/.bashrc"
+#alias ls="ls --indicator-style=classify --group-directories-first --color"
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-alias ls="ls --indicator-style=classify --group-directories-first --color"
+# update dotfile repository
+function dotfile_commit {
+    pushd ~/Code/dotfiles
+    git add .
+    git commit -m 'update dotfiles'
+    git push origin master
+    popd
+}
 
-# aptitude
-alias apt="sudo apt-get"
-alias apti="sudo apt-get install"
-alias apts="sudo apt-cache search"
-alias aptu="sudo apt-cache update"
 
 # Git
 alias g="git"
@@ -41,6 +40,7 @@ alias grbc="git rebase --continue"
 alias grs="git reset --soft"
 alias grh="git reset --hard"
 alias grm="git remove"
+alias grv="git remote -v"
 alias gus="git remove --cached"
 alias gs="git status"
 alias gst="git stash"
@@ -61,3 +61,6 @@ alias vdu="vagrant destroy && vagrant up"
 # python
 #alias python="python2"
 alias pyc="find . -name '*.pyc' -delete"
+
+# isabelle/HOL
+alias isabelle="/Applications/Isabelle2016-1.app/Isabelle/bin/isabelle"

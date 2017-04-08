@@ -118,4 +118,4 @@ function parse_git_branch {
 }
 
 # shell prompt
-export PS1='\u@\h \[\w $(parse_git_branch)$ '
+# export PS1='\u@\h \[\w $(parse_git_branch)$ '
