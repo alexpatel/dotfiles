@@ -144,3 +144,15 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
+
+" make copy/pasting nice
+function! ToggleMouse()
+    if &mouse == 'a'
+        set mouse=r
+        set nonu
+    else
+        set mouse=a
+        set nu
+    endif
+endfunction
+nnoremap <leader>m :call ToggleMouse()<CR>
