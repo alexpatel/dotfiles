@@ -20,14 +20,15 @@ set modifiable								" Change contents of any buffer
 set noerrorbells                            " Disable bells on error
 set backupdir=~/.vim/tmp,.                  " Backup directory
 set directory=~/.vim/tmp,.                  " Backup directory
-set number									" Line numbers
-set numberwidth=5                           " Width of line number buffer
+set nonu                                    " No line numbers
+"set number									" Line numbers
+"set numberwidth=5                          " Width of line number buffer
 set autoindent								" Autoindent
 set paste                                   " Smart text paste from other apps
 set splitbelow                              " Auto split horizontal window below
 set splitright                              " Auto split vertical window right
 set scrolloff=5                             " Keep at least 5 lines below the cursor
-set mouse=a                                 " Mouse support
+set mouse=r                                 " Mouse support
 
 " Autosave
 au FocusLost * silent! wa
