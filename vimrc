@@ -1,3 +1,5 @@
+
+
 filetype plugin indent on
 
 call pathogen#infect()
@@ -33,7 +35,7 @@ set mouse=r                                 " Mouse support
 " Spell-check highlighting
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
-ap ss :setlocal spell! spelllang=en_us<CR>
+map ss :setlocal spell! spelllang=en_us<CR>
 
 " Autosave
 au FocusLost * silent! wa
