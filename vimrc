@@ -30,6 +30,11 @@ set splitright                              " Auto split vertical window right
 set scrolloff=5                             " Keep at least 5 lines below the cursor
 set mouse=r                                 " Mouse support
 
+" Spell-check highlighting
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+ap ss :setlocal spell! spelllang=en_us<CR>
+
 " Autosave
 au FocusLost * silent! wa
 set autowrite
