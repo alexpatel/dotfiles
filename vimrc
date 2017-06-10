@@ -1,9 +1,8 @@
-
-
-filetype plugin indent on
-
+set nocp
+" set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
 call pathogen#infect()
-call pathogen#helptags()
+syntax on
+filetype plugin indent on
 
 let mapleader=","							" Change leader from \ to ,
 set nocompatible							" No Vi compatibility
