@@ -2,14 +2,15 @@
 alias bd="cd .."
 alias "..."="cd ../.."
 #alias -="cd -"
-alias d="cd ~/Dropbox/2016-2017"
+alias dr="cd ~/Dropbox/2016-2017"
 alias c="cd ~/Code"
 alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
 alias src="source ~/.bashrc"
+alias grep="ack -nir -C 4"
+
 alias v="vim"
-#alias ls="ls --indicator-style=classify --group-directories-first --color"
 
 # update dotfile repository
 function dotfile_commit {
@@ -65,3 +66,18 @@ alias pyc="find . -name '*.pyc' -delete"
 
 # isabelle/HOL
 alias isabelle="/Applications/Isabelle2016-1.app/Isabelle/bin/isabelle"
+
+# docker
+alias dk="docker"
+alias dc="docker-compose"
+alias dps="docker ps -a -q"
+
+# stop and remove all containers/images
+function dclean {
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
+    docker rmi $(docker images -q)
+}
+
+# princess
+alias bootbf="VBoxManage startvm Harvard-PRINCESS --type headless"
