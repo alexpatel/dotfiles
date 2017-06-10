@@ -1,33 +1,19 @@
 # filesystem movement
 alias bd="cd .."
 alias "..."="cd ../.."
-#alias -="cd -"
-alias dr="cd ~/Dropbox/2016-2017"
+alias cdl="cd -"
+alias d="cd ~/Dropbox/2016-2017"
 alias c="cd ~/Code"
 alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
 alias src="source ~/.bashrc"
-alias grep="ack -nir -C 4"
-
+alias ack="ack -Hnir -C 4"
 alias v="vim"
-
-# update dotfile repository
-function dotfile_commit {
-    pushd ~/Code/dotfiles
-    git add .
-    git commit -m 'update dotfiles'
-    git push origin master
-    popd
-}
-
-
-# Git
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit --verbose"
-#alias gd="git difftool --tool=vimdiff --no-prompt"
 alias gco="git checkout"
 alias gf="git fetch"
 alias gfa="git fetch --all"
@@ -64,16 +50,13 @@ alias vdu="vagrant destroy && vagrant up"
 #alias python="python2"
 alias pyc="find . -name '*.pyc' -delete"
 
-# isabelle/HOL
-alias isabelle="/Applications/Isabelle2016-1.app/Isabelle/bin/isabelle"
-
 # docker
 alias dk="docker"
 alias dc="docker-compose"
 alias dps="docker ps -a -q"
 
 # stop and remove all containers/images
-function dclean {
+function drm {
     docker stop $(docker ps -a -q)
     docker rm $(docker ps -a -q)
     docker rmi $(docker images -q)
