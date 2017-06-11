@@ -4,6 +4,8 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+syntax off
+
 let mapleader=","							" Change leader from \ to ,
 set nocompatible							" No Vi compatibility
 set whichwrap+=h,l							" Allow movement onto next/prev line with 'h, l' 
