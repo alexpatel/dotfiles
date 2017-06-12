@@ -8,8 +8,14 @@ alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
 alias src="source ~/.bashrc"
+
+
+
+alias show_large_files="du -a $HOME | sort -n -r | head -n 50"
 alias ack="ack -Hnir -C 4"
 alias v="vim"
+
+# git
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
@@ -52,14 +58,21 @@ alias pyc="find . -name '*.pyc' -delete"
 
 # docker
 alias dk="docker"
+alias dkb="docker build --rm"
+alias dkr="docker run"
+alias dkcl_img='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias dkcl_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 alias dc="docker-compose"
+alias dcu="docker-compose up"
+alias dcb="docker-compose build"
 alias dps="docker ps -a -q"
 
 # stop and remove all containers/images
 function drm {
-    docker stop $(docker ps -a -q)
-    docker rm $(docker ps -a -q)
-    docker rmi $(docker images -q)
+    ps=$(docker ps -a -q)
+    docker stop $ps
+    docker rm $ps
+    docker rmi $ps
 }
 
 # princess
