@@ -9,13 +9,12 @@ alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
 alias src="source ~/.bashrc"
 
-
-
-alias show_large_files="du -a $HOME | sort -n -r | head -n 50"
-alias ack="ack -Hnir -C 4"
+# Hacking
+alias grep="grep -Hnir"
 alias v="vim"
+alias show_large_files="du -a $HOME | sort -n -r | head -n 50"
 
-# git
+# Git
 alias g="git"
 alias ga="git add"
 alias gb="git branch"
@@ -52,11 +51,11 @@ alias vd="vagrant destroy"
 alias vrl="vagrant reload"
 alias vdu="vagrant destroy && vagrant up"
 
-# python
+# Python
 #alias python="python2"
 alias pyc="find . -name '*.pyc' -delete"
 
-# docker
+# Docker
 alias dk="docker"
 alias dkb="docker build --rm"
 alias dkr="docker run"
@@ -72,8 +71,9 @@ function drm {
     ps=$(docker ps -a -q)
     docker stop $ps
     docker rm $ps
-    docker rmi $ps
+    docker rmi $(docker images -q)
 }
 
-# princess
+# Harvard-PRINCESS
 alias bootbf="VBoxManage startvm Harvard-PRINCESS --type headless"
+alias sshbf="ssh alex\@localhost -p 2222"
