@@ -75,5 +75,5 @@ function drm {
 }
 
 # Harvard-PRINCESS
-alias bootbf="VBoxManage startvm Harvard-PRINCESS --type headless"
-alias sshbf="ssh alex\@localhost -p 2222"
+alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
+alias syncbf="rsync -avz ~/Dropbox/2016-2017/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
