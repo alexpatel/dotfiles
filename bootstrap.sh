@@ -9,6 +9,8 @@ declare -A map=(
 	["bashrc"]="$HOME/.bashrc"
 	["bash_aliases"]="$HOME/.bash_aliases"
 	["tmux.conf"]="$HOME/.tmux.conf"
+	["hgrc"]="$HOME/.hgrc"
+	["hgignore"]="$HOME/.hgignore"
 )
 
 for f in "${!map[@]}"
