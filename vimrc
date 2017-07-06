@@ -6,32 +6,32 @@ filetype plugin indent on
 
 syntax off
 
-let mapleader=","							" Change leader from \ to ,
-set nocompatible							" No Vi compatibility
-set whichwrap+=h,l							" Allow movement onto next/prev line with 'h, l' 
-set backspace=indent,eol,start				" Allow backspace in insert mode
-set cursorline								" Highlight cursorline
-set mouse=nv								" Allow mouse in normal mode
-set ruler								    " Show cursor position
-set shortmess=atI							" Don't show intro message
-set title		        					" Show filename in window titlebar
-set showcmd								    " Show partial command as it's being typed
-set linebreak								" Don't wrap text in middle of word
-set directory=$HOME/.vim/swapdir			" Swapfile storage dir
-set clipboard=unnamed						" Access X11 Clipboard by default
-set modifiable								" Change contents of any buffer 
-set noerrorbells                            " Disable bells on error
-set backupdir=~/.vim/tmp,.                  " Backup directory
-set directory=~/.vim/tmp,.                  " Backup directory
-set nonu                                    " No line numbers
-"set number									" Line numbers
-"set numberwidth=5                          " Width of line number buffer
-set autoindent								" Autoindent
-set paste                                   " Smart text paste from other apps
-set splitbelow                              " Auto split horizontal window below
-set splitright                              " Auto split vertical window right
-set scrolloff=5                             " Keep at least 5 lines below the cursor
-set mouse=r                                 " Mouse support
+let mapleader=","                               " Change leader from \ to ,
+set nocompatible                                " No Vi compatibility
+set whichwrap+=h,l                              " Allow movement onto next/prev line with 'h, l' 
+set backspace=indent,eol,start                  " Allow backspace in insert mode
+set cursorline                                  " Highlight cursorline
+set mouse=nv                                    " Allow mouse in normal mode
+set ruler                                       " Show cursor position
+set shortmess=atI                               " Don't show intro message
+set title                                       " Show filename in window titlebar
+set showcmd                                     " Show partial command as it's being typed
+set linebreak                                   " Don't wrap text in middle of word
+set directory=$HOME/.vim/swapdir                " Swapfile storage dir
+set clipboard=unnamed                           " Access X11 Clipboard by default
+set modifiable                                  " Change contents of any buffer 
+set noerrorbells                                " Disable bells on error
+set backupdir=~/.vim/tmp,.                      " Backup directory
+set directory=~/.vim/tmp,.                      " Backup directory
+set nonu                                        " No line numbers
+"set number                                     " Line numbers
+"set numberwidth=5                              " Width of line number buffer
+set autoindent                                  " Autoindent
+set paste                                       " Smart text paste from other apps
+set splitbelow                                  " Auto split horizontal window below
+set splitright                                  " Auto split vertical window right
+set scrolloff=5                                 " Keep at least 5 lines below the cursor
+set mouse=r                                     " Mouse support
 
 " Spell-check highlighting
 hi clear SpellBad
@@ -43,18 +43,14 @@ au FocusLost * silent! wa
 set autowrite
 
 " Tabs
-set smarttab
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Search
 map <space> /
 map <c-space> ?
-set ignorecase								" Ignore case of searches
-set hlsearch								" Highlight searches
-set incsearch								" Search as chars are entered
+set ignorecase                                  " Ignore case of searches
+set hlsearch                                    " Highlight searches
+set incsearch                                   " Search as chars are entered
 
 " Unhighlight search results
 nmap <silent> <leader>n :silent nohl<cr>
@@ -145,3 +141,13 @@ function! ToggleMouse()
     endif
 endfunction
 nnoremap <leader>m :call ToggleMouse()<CR>
+
+" show all tabs in a file
+function! ToggleTabs()
+    if &listchars == 'tab:>-'
+        set listchars=
+    else
+        set listchars=tab:>-
+    endif
+endfunction
+nnoremap <leader>t :call ToggleTabs()<CR>
