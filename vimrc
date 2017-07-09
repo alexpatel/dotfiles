@@ -1,10 +1,9 @@
+syntax off
+filetype plugin indent on
+
 set nocp
 " set rtp+=/path/to/rtp/that/included/pathogen/vim " if needed
 call pathogen#infect()
-syntax on
-filetype plugin indent on
-
-syntax off
 
 let mapleader=","                               " Change leader from \ to ,
 set nocompatible                                " No Vi compatibility
@@ -32,6 +31,7 @@ set splitbelow                                  " Auto split horizontal window b
 set splitright                                  " Auto split vertical window right
 set scrolloff=5                                 " Keep at least 5 lines below the cursor
 set mouse=r                                     " Mouse support
+set breakindent                                 " preserve indent on wrap
 
 " Spell-check highlighting
 hi clear SpellBad
@@ -113,7 +113,7 @@ autocmd VimEnter * call NERDTreestartup()
 noremap nt :NERDTreeToggle<CR>
 
 " 80 columns
-au BufRead,BufNewFile *.txt setlocal textwidth=80
+au BufRead,BufNewFile * setlocal textwidth=80
 
 " tagbar
 noremap tb :TagbarToggle<CR>
