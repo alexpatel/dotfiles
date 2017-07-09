@@ -7,12 +7,15 @@ alias c="cd ~/Code"
 alias df="cd ~/Code/dotfiles"
 alias dl="cd ~/Downloads"
 alias cs="cd ~/Dropbox/2016-2017/cs161"
+
+alias v="vim"
+alias grep="grep -Hnir"
+
+# source bash profile
 alias src="source ~/.bashrc"
 
-# Hacking
-alias grep="grep -Hnir"
-alias v="vim"
-alias show_large_files="du -a $HOME | sort -n -r | head -n 50"
+# list block devices
+alias lsdev="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 
 # Git
 alias g="git"
