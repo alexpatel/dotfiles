@@ -1,0 +1,10 @@
+.DS_store
+1
+:1
+:w
+:w!
+*.swp
+*.swo
+*.pyc
+*.swn
+twistd.pid
