@@ -119,3 +119,6 @@ function parse_git_branch {
 
 # shell prompt
 # export PS1='\u@\h \[\w $(parse_git_branch)$ '
+
+# init ocaml OPAM
+. /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
