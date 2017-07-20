@@ -17,6 +17,13 @@ alias src="source ~/.bashrc"
 # list block devices
 alias lsdev="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 
+# list large files
+function lslarge {
+    sudo find / -type f -size +100000k -exec ls -lh {} \; 2>/dev/null |\
+        awk '{ print $5 "  " $9 }'
+}
+
+
 # Git
 alias g="git"
 alias ga="git add"
@@ -70,7 +77,7 @@ alias dcb="docker-compose build"
 alias dps="docker ps -a -q"
 
 # stop and remove all containers/images
-function drm {
+function dkrm {
     ps=$(docker ps -a -q)
     docker stop $ps
     docker rm $ps
