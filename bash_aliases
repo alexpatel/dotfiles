@@ -88,3 +88,4 @@ function dkrm {
 alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
 alias syncbf="rsync -avz ~/Dropbox/2016-2017/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
 alias p="cd ~/Dropbox/2016-2017/princess"
+alias sshmnch="ssh ahp@munchmunch.seas.harvard.edu"
