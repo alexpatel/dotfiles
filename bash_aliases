@@ -90,3 +90,12 @@ alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
 alias syncbf="rsync -avz ~/Dropbox/2016-2017/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
 alias p="cd ~/Dropbox/2016-2017/princess"
 alias sshmnch="ssh ahp@munchmunch.seas.harvard.edu"
+
+# view live disk usage stats on MacOS
+function macos_diskusage {
+    tmux new-session -d 'diskusage'
+    tmux split-window -v 'sudo iostat 1'
+    tmux split-window -h 
+    tmux new-window 'sudo fs_usage -f diskio'
+    tmux -2 attach-session -d 
+}
