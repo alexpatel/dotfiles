@@ -19,7 +19,7 @@ alias lsdev="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 
 # list large files
 function lslarge {
-    sudo find / -type f -size +100000k -exec ls -lh {} \; 2>/dev/null |\
+    sudo find / -type f -size +10000k -exec ls -lh {} \; 2>/dev/null |\
         awk '{ print $5 "  " $9 }'
 }
 
@@ -87,3 +87,4 @@ function dkrm {
 # Harvard-PRINCESS
 alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
 alias syncbf="rsync -avz ~/Dropbox/2016-2017/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
+alias p="cd ~/Dropbox/2016-2017/princess"
