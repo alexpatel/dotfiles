@@ -65,6 +65,7 @@ alias vdu="vagrant destroy && vagrant up"
 # Python
 #alias python="python2"
 alias pyc="find . -name '*.pyc' -delete"
+alias activate="source venv/bin/activate"
 
 # Docker
 alias dk="docker"
