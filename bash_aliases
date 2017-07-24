@@ -83,7 +83,7 @@ function dkrm {
     ps=$(docker ps -a -q)
     docker stop $ps
     docker rm $ps
-    docker rmi $(docker images -q)
+    docker rmi -f $(docker images -q)
 }
 
 # Harvard-PRINCESS
