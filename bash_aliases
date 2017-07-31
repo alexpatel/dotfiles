@@ -84,7 +84,6 @@ alias dkr="docker run -it"
 alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcb="docker-compose build"
-alias dps="docker ps -a -q"
 
 # stop and remove all containers/images
 dkrm() {
