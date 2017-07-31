@@ -111,9 +111,7 @@ prompt_hostname() {
 }
 
 # shell prompt
-#export PS1='$(prompt_hostname)../\W \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \${?##0} \$ '
-
-export PS1="[\t] \u$(prompt_hostname):\W\a \[$(prompt_git_branch)\] (\${?})\$ "
+export PS1="[\t]$(prompt_hostname)\W/\a\[$(prompt_git_branch)\] (\${?})\$ "
 
 # init ocaml OPAM
 . /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
