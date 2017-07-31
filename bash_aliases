@@ -94,6 +94,9 @@ dkrm() {
     docker rmi $(docker images -a --filter=dangling=true -q)
 }
 
+# do root things on a container with bash
+dkrt() { docker exec -it --user root $1 /bin/bash; }
+
 # Harvard-PRINCESS
 alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
 alias syncbf="rsync -avz ~/Dropbox/2016-2017/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
