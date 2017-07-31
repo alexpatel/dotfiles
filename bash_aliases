@@ -26,12 +26,6 @@ function lslarge {
 # Git
 
 alias g="git"
-
-alias gpl="git pull"
-function gps { 
-    git push origin `git rev-parse --abbrev-ref HEAD`
-}
-
 alias ga="git add"
 alias gcb="git rev-parse --abbrev-ref HEAD"
 alias gb="git branch"
@@ -39,6 +33,10 @@ alias gc="git commit --verbose"
 alias gco="git checkout"
 alias gf="git fetch --all"
 alias gfa="git fetch --all"
+alias gpl="git pull"
+function gps {
+    git push origin `git rev-parse --abbrev-ref HEAD` $@
+}
 alias gl="git log --oneline"
 alias gll="git log --abbrev-commit --decorate --date=relative --all --stat"
 alias grs="git reset --soft"
@@ -82,9 +80,7 @@ alias activate="source venv/bin/activate"
 # Docker
 alias dk="docker"
 alias dkb="docker build --rm"
-alias dkr="docker run"
-alias dkcl_img='docker rmi $(docker images -a --filter=dangling=true -q)'
-alias dkcl_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+alias dkr="docker run -it"
 alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcb="docker-compose build"
@@ -95,7 +91,7 @@ function dkrm {
     ps=$(docker ps -a -q)
     docker stop $ps
     docker rm $ps
-    docker rmi -f $(docker images -q)
+    docker rmi $(docker images -a --filter=dangling=true -q)
 }
 
 # Harvard-PRINCESS
