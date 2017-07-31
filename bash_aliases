@@ -24,11 +24,14 @@ function lslarge {
 
 
 # Git
+
+alias g="git"
+
+alias gpl="git pull"
 function gps { 
     git push origin `git rev-parse --abbrev-ref HEAD`
 }
 
-alias g="git"
 alias ga="git add"
 alias gcb="git rev-parse --abbrev-ref HEAD"
 alias gb="git branch"
@@ -38,10 +41,6 @@ alias gf="git fetch --all"
 alias gfa="git fetch --all"
 alias gl="git log --oneline"
 alias gll="git log --abbrev-commit --decorate --date=relative --all --stat"
-alias gpl="git pull"
-alias grba="git rebase --abort"
-alias grb="git rebase -i"
-alias grbc="git rebase --continue"
 alias grs="git reset --soft"
 alias grh="git reset --hard"
 alias grm="git remove"
@@ -52,6 +51,18 @@ alias gst="git stash"
 alias gstd="git stash drop"
 alias gsta="git stash apply"
 alias gstl="git stash list"
+
+alias grba="git rebase --abort"
+alias grbc="git rebase --continue"
+
+function grb {
+    if [[ $# -eq 0 ]] ; then
+        git rebase -i HEAD~10
+    else
+        git rebase -i $@
+    fi
+} 
+
 
 # Vagrant
 alias vu="vagrant up"
