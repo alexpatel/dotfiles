@@ -43,7 +43,7 @@ au FocusLost * silent! wa
 set autowrite
 
 " Tabs
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 " Search
 map <space> /

@@ -17,7 +17,7 @@ alias src="source ~/.bashrc"
 alias lsdev="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
 
 # list large files
-function lslarge {
+lslarge() {
     sudo find / -type f -size +100000k -exec ls -lh {} \; 2>/dev/null |\
         awk '{ print $5 "  " $9 }'
 }
@@ -34,7 +34,7 @@ alias gco="git checkout"
 alias gf="git fetch --all"
 alias gfa="git fetch --all"
 alias gpl="git pull"
-function gps {
+gps() {
     git push origin `git rev-parse --abbrev-ref HEAD` $@
 }
 alias gl="git log --oneline"
@@ -53,7 +53,7 @@ alias gstl="git stash list"
 alias grba="git rebase --abort"
 alias grbc="git rebase --continue"
 
-function grb {
+grb() {
     if [[ $# -eq 0 ]] ; then
         git rebase -i HEAD~10
     else
@@ -87,7 +87,7 @@ alias dcb="docker-compose build"
 alias dps="docker ps -a -q"
 
 # stop and remove all containers/images
-function dkrm {
+dkrm() {
     ps=$(docker ps -a -q)
     docker stop $ps
     docker rm $ps

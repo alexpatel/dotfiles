@@ -102,18 +102,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# prompt git working directory status
-function parse_git_dirty {
-    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+prompt_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# prompt git branch
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+prompt_hostname() {
+    if [ `hostname`=$HOSTNAME ]; then echo -n ''; else echo -n '\@\h:'; fi
 }
 
 # shell prompt
-export PS1='\h \[\w $(parse_git_branch)$ '
+#export PS1='$(prompt_hostname)../\W \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \${?##0} \$ '
+
+export PS1="[\t] \u$(prompt_hostname):\W\a \[$(prompt_git_branch)\] (\${?})\$ "
 
 # init ocaml OPAM
 . /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
