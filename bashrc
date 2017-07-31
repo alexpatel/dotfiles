@@ -8,20 +8,15 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+shopt -s histappend 
+#shopt -s cmdhist
+#shopt -s lithist
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+HISTFILESIZE=
+HISTSIZE=
+HISTFILE=/Users/apatel/Dropbox/2016-2017/bash_history
+#HISTCONTROL=ignoredups
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -118,7 +113,11 @@ function parse_git_branch {
 }
 
 # shell prompt
-# export PS1='\u@\h \[\w $(parse_git_branch)$ '
+export PS1='\h \[\w $(parse_git_branch)$ '
 
 # init ocaml OPAM
 . /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# pysmt
+export PYTHONPATH="/Users/apatel/.smt_solvers/python-bindings-2.7:${PYTHONPATH}"
+
