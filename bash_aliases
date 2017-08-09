@@ -3,10 +3,9 @@ alias bd="cd .."
 alias "..."="cd ../.."
 alias cdl="cd -"
 alias d="cd ~/Dropbox/2016-2017"
-alias c="cd ~/Code"
-alias df="cd ~/Code/dotfiles"
+alias c="cd ~/Dropbox/2016-2017/code"
+alias df="cd ~/Dropbox/2016-2017/code/dotfiles"
 alias dl="cd ~/Downloads"
-alias cs="cd ~/Dropbox/2016-2017/cs161"
 
 alias v="vim"
 
@@ -84,6 +83,7 @@ alias dkr="docker run -it"
 alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcb="docker-compose build"
+alias dcrup="dc down && dc build && dc up"
 
 # stop and remove all containers/images
 dkrm() {
@@ -103,3 +103,9 @@ alias p="cd ~/Dropbox/2016-2017/princess"
 alias sshmnch="ssh ahp@munchmunch.seas.harvard.edu"
 
 PYTHONPATH="/Users/apatel/.smt_solvers/python-bindings-2.7:/Users/apatel/.smt_solvers/z3:/Users/apatel/.smt_solvers:${PYTHONPATH}"
+
+test_dag() {
+  worker=`dk ps | grep etlexternal_worker | awk '{ print $1 }'`
+  docker exec -it $worker airflow trigger_dag onshape-extracts;
+  docker exec -it $worker airflow trigger_dag onshape-lifecycle;
+}

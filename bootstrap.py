@@ -8,7 +8,7 @@ conf_map = {
 	"vim": "$HOME/.vim",
 	"bashrc": "$HOME/.bashrc",
 	"bash_aliases": "$HOME/.bash_aliases",
-	"tmux": "$HOME/.tmux.conf",
+	"tmux.conf": "$HOME/.tmux.conf",
 	"hgrc": "$HOME/.hgrc",
 	"hgignore": "$HOME/.hgignore",
 }
