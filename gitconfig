@@ -1,0 +1,35 @@
+[user]
+	name = Alex Patel
+	email = patelalex02@gmail.com
+
+[core]
+	excludesfile = /Users/apatel/.gitignore_global
+
+[help]
+	autocorrect = true
+
+[color]
+    branch = false
+    diff = false
+    status = true
+    showbranch = false
+    ui = false
+	interactive = false
+	pager = false
+
+[alias]
+	branchname = rev-parse --abbrev-ref HEAD
+    commit = commit --verbose
+    fetch = fetch --all
+	stat = show --stat
+	wstat = diff --stat
+    unstage = reset HEAD --
+    slog = log --oneline
+    llog = log --abbrev-commit --decorate --date=relative --all --stat
+    hreset = reset --hard
+
+[push]
+	default = matching
+
+[remote-hg]
+	hg-git-compat = true

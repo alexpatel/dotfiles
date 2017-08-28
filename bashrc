@@ -15,7 +15,7 @@ shopt -s histappend
 
 HISTFILESIZE=
 HISTSIZE=
-HISTFILE=/Users/apatel/Dropbox/2016-2017/bash_history
+HISTFILE=/Users/apatel/Dropbox/bash_history
 #HISTCONTROL=ignoredups
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -102,16 +102,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-prompt_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-prompt_hostname() {
-    if [ `hostname`=$HOSTNAME ]; then echo -n ''; else echo -n '\@\h:'; fi
-}
-
 # shell prompt
-#export PS1="[\t]$(prompt_hostname)\W/\a\[$(prompt_git_branch)\] (\${?})\$ "
+
+prompt_git_branch() { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'; }
+prompt_hostname() { if [ `hostname`=$HOSTNAME ]; then echo -n ''; else echo -n '\@\h:'; fi; }
+prompt_date() { date "+%Y%m%d"; }
+export PS1="[\D{%Y/%m/%d} \T] $(prompt_hostname)\W/\a\[$(prompt_git_branch)\] (\${?})\$ "
 
 # init ocaml OPAM
 . /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
@@ -119,3 +115,11 @@ prompt_hostname() {
 # pysmt
 export PYTHONPATH="/Users/apatel/.smt_solvers/python-bindings-2.7:${PYTHONPATH}"
 
+# list block devices
+alias lsdev="sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
+
+# list large files
+lslarge() {
+    sudo find / -type f -size +100000k -exec ls -lh {} \; 2>/dev/null |\
+        awk '{ print $5 "  " $9 }'
+}
