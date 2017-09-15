@@ -90,3 +90,8 @@ test_dag() {
 alias sshfp="ssh ahp@fencepost.gnu.org"
 alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
 alias syncbf="rsync -avz ${DOCUMENTS}/princess/Guppy ahp@nomnomnom.seas.harvard.edu:~/"
+
+# just the source code, please
+get_git_repo_files() {
+    git archive --format=tar --remote=$1 HEAD | tar xf -
+}

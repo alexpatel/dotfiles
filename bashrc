@@ -107,7 +107,7 @@ fi
 prompt_git_branch() { git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'; }
 prompt_hostname() { if [ `hostname`=$HOSTNAME ]; then echo -n ''; else echo -n '\@\h:'; fi; }
 prompt_date() { date "+%Y%m%d"; }
-export PS1="[\D{%Y/%m/%d} \T] $(prompt_hostname)\W/\a\[$(prompt_git_branch)\] (\${?})\$ "
+export PS1="[\D{%Y/%m/%d} \T] \W/\a\[$(prompt_git_branch)\] (\${?})\$ "
 
 # init ocaml OPAM
 . /Users/apatel/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
