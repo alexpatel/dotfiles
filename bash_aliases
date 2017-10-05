@@ -53,6 +53,8 @@ alias vdu="vagrant destroy && vagrant up"
 #alias python="python2"
 alias pyc="find . -name '*.pyc' -delete"
 alias activate="source venv/bin/activate"
+# pySMT
+#PYTHONPATH="${HOME}/.smt_solvers/python-bindings-2.7:${HOME}/.smt_solvers/z3:${HOME}/.smt_solvers:${PYTHONPATH}"
 
 # Docker
 alias dk="docker"
@@ -62,8 +64,10 @@ alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcb="docker-compose build"
 alias dcrup="docker-compose down && docker-compose build && docker-compose up"
-# do root things on a container with bash
+
+# get a root shell on  a docker container
 dkrt() { docker exec -it --user root $1 /bin/bash; }
+
 # stop and remove all containers/images
 dkrm() {
     ps=$(docker ps -a -q)
@@ -71,7 +75,6 @@ dkrm() {
     docker rm $ps
     docker rmi $(docker images -a --filter=dangling=true -q)
 }
-
 
 # Harvard-PRINCESS
 alias p="cd ${DOCUMENTS}/princess"
@@ -83,9 +86,6 @@ test_dag() {
   docker exec -it $worker airflow trigger_dag $1
 }
 
-# pySMT
-#PYTHONPATH="${HOME}/.smt_solvers/python-bindings-2.7:${HOME}/.smt_solvers/z3:${HOME}/.smt_solvers:${PYTHONPATH}"
-
 # SSH
 alias sshfp="ssh ahp@fencepost.gnu.org"
 alias sshbf="ssh ahp@nomnomnom.seas.harvard.edu"
@@ -95,3 +95,12 @@ alias syncbf="rsync -avz ${DOCUMENTS}/princess/Guppy ahp@nomnomnom.seas.harvard.
 get_git_repo_files() {
     git archive --format=tar --remote=$1 HEAD | tar xf -
 }
+
+# cleanup pdflatex residue
+tex_clean() { find . -name "*.{aux,log,out,toc}" -delete; }
+
+# start 263 vm
+start263() { VBoxManage startvm vm263 --type headless; }
+
+# ssh 263 vm
+ssh263() { ssh httpd@192.168.26.3; }
